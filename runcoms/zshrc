@@ -12,3 +12,38 @@ fi
 
 # Customize to your needs...
 
+#
+# alias
+#
+alias liso='cd /Users/siyuan/workspace/C/liso_http_server'
+alias 15-441='cd /Users/siyuan/Documents/Courses/CMU/Computer\ Network/assignments'
+alias projects='cd /Users/siyuan/Projects'
+alias cl='clear'
+alias mm='mvim'
+alias mmt='mvim -p'
+alias lsa='ls -alh'
+alias topteam='cd /Users/siyuan/workspace/alibaba/weibo-hot-word'
+
+#
+# git
+#
+alias gs='git status'
+alias gss='git stash'
+alias gaa='git add .'
+alias ga='git add'
+alias gconfg='git config --global -l'
+alias gconfl='git config --local -l'
+alias gl1="git lg1"
+alias gl2="git lg2"
+alias gff="git diff"
+alias gffc="git diff --cached"
+alias gp='git push origin $(git-branch-current 2> /dev/null)'
+
+alias bower='noglob bower'
+alias work-js='cd /Users/siyuan/workspace/JavaScript'
+alias work-java='cd /Users/siyuan/workspace/Java'
+alias work-cloud='cd /Users/siyuan/workspace/alibaba/cloudspace'
+bindkey "^[^[[D" backward-word
+bindkey "^[^[[C" forward-word
+
+
