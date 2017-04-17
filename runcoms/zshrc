@@ -12,17 +12,20 @@ fi
 
 # Customize to your needs...
 
+
 #
-# alias
+# Miscellaneous
 #
-alias liso='cd /Users/siyuan/workspace/C/liso_http_server'
-alias 15-441='cd /Users/siyuan/Documents/Courses/CMU/Computer\ Network/assignments'
-alias projects='cd /Users/siyuan/Projects'
 alias cl='clear'
 alias mm='mvim'
 alias mmt='mvim -p'
 alias lsa='ls -alh'
-alias topteam='cd /Users/siyuan/workspace/alibaba/weibo-hot-word'
+alias bower='noglob bower'
+alias coding-geek='cd /Users/siyuan/workspace/alibaba/coding-geek'
+alias notes='cd /Users/siyuan/Documents/阿里巴巴/AliDrive/notes'
+alias tailf='tail -f -n 100'
+
+
 
 #
 # git
@@ -37,13 +40,82 @@ alias gl1="git lg1"
 alias gl2="git lg2"
 alias gff="git diff"
 alias gffc="git diff --cached"
-alias gp='git push origin $(git-branch-current 2> /dev/null)'
+alias gpp-core='git push origin "$(git-branch-current 2> /dev/null)" && ./deploy.command'
 
-alias bower='noglob bower'
-alias work-js='cd /Users/siyuan/workspace/JavaScript'
-alias work-java='cd /Users/siyuan/workspace/Java'
-alias work-cloud='cd /Users/siyuan/workspace/alibaba/cloudspace'
 bindkey "^[^[[D" backward-word
 bindkey "^[^[[C" forward-word
+# enable VI key bindings
+#bindkey -v
+# enable command history search
+bindkey "^R" history-incremental-pattern-search-backward
+
+#
+# Linux 101 Hacks
+#
+alias ..2='cd ../..'
+alias ..3='cd ../../..'
+alias ..4='cd ../../../..'
+alias ..5='cd ../../../../..'
+
+#
+# For safety
+#
+# "rm -rf" is very dangerous! Must not be used.
+
+
+#
+# Projects
+#
+alias liso='cd /Users/siyuan/workspace/C/liso_http_server'
+alias 15-441='cd /Users/siyuan/Documents/Courses/CMU/Computer\ Network/assignments'
+alias rmi='cd /Users/siyuan/workspace/Projects/cmu-15-440-s12'
+alias cmu-p1='cd /Users/siyuan/Documents/Courses/CMU/15-410_OS_S2015/projects/project1/p1'
+alias cmu-p2='cd /Users/siyuan/Documents/Courses/CMU/15-410_OS_S2015/projects/project2/p2'
+alias proxylab='cd /Users/siyuan/Documents/Courses/CMU/15-213/labs/lab8'
+alias pintos='cd /Users/siyuan/workspace/Projects/pintos/pintos'
+alias linux011='cd /Users/siyuan/workspace/Projects/linux0.11'
+alias linuxkernel='cd /Users/siyuan/OpenSource/kernel/linux-2.0.33'
+alias jos='cd /Users/siyuan/Documents/Courses/SJTU/AOSI/jos-2015-fall'
+alias xv6='cd /Users/siyuan/OpenSource/xv6'
+alias btree='cd /Users/siyuan/workspace/btree'
+alias cse='cd /Users/siyuan/Documents/Courses/SJTU/CSE'
+
+alias kaoyan='cd /Users/siyuan/Documents/kaoyan/复习计划'
+alias algorithm='cd /Users/siyuan/workspace/algorithm'
+
+
+# APUE
+alias apue='cd /Users/siyuan/workspace/C/APUE'
+
+# Unix Network Programming
+alias unp='cd /Users/siyuan/OpenSource/unp/unpv13e'
+
+# C语言项目
+alias csapp='cd "/Users/siyuan/Documents/Courses/CMU/15-213/demos"'
+
+# GNU Autotools
+alias autotools='cd /Users/siyuan/workspace/Cpp/autotools_learning'
+
+# C语言书籍
+#alias clang='cd /Users/siyuan/Documents/Ebooks/C_C++/C'
+
+# 博客
+alias blog='cd /Users/siyuan/workspace/博客'
+
+# Redis 3.0 带注释源码
+alias redis='cd /Users/siyuan/OpenSource/database/redis-3.0-annotated'
+
+# 4.4 BSD源码
+alias bsd='cd /Users/siyuan/4.4BSD/src'
+
+# 工作笔记
+alias alibaba='cd /Users/siyuan/Documents/阿里巴巴/AliDrive/notes'
+alias hadoopdocker='cd /Users/siyuan/workspace/spark/hadoop-cluster-docker'
+
+# Research
+alias cuda='cd /Users/siyuan/workspace/IPADS/cuda_learn'
+alias wukong='cd /Users/siyuan/workspace/IPADS/wukong'
+alias ipads='cd /Users/siyuan/workspace/IPADS'
+
 
 

@@ -17,7 +17,7 @@ fi
 # Editors
 #
 
-export EDITOR='nano'
+export EDITOR='vim'
 export VISUAL='nano'
 export PAGER='less'
 
@@ -78,7 +78,43 @@ fi
 # Set architecture flags
 export ARCHFLAGS="-arch x86_64"
 # Ensure user-installed binaries take precedence
-export PATH=/usr/local/bin:$PATH
+# export PATH="/usr/local/bin:$PATH"
 # Load .zshrc if it exists
 test -f ~/.zshrc && source ~/.zshrc
+
+#
+# Color SSH Session Tab
+#
+tab-color() {
+    echo -ne "\033]6;1;bg;red;brightness;$1\a"
+    echo -ne "\033]6;1;bg;green;brightness;$2\a"
+    echo -ne "\033]6;1;bg;blue;brightness;$3\a"
+}
+tab-reset() {
+    echo -ne "\033]6;1;bg;*;default\a"
+}
+ 
+# Change the color of the tab when using SSH
+# reset the color after the connection closes
+color-ssh() {
+    if [[ -n "$ITERM_SESSION_ID" ]]; then
+        trap "tab-reset" INT EXIT
+        if [[ "$*" =~ "production|ec2-.*compute-1" ]]; then
+            tab-color 255 0 0
+        else
+            tab-color 0 255 0
+        fi
+    fi
+    ssh $*
+}
+compdef _ssh color-ssh=ssh
+alias ssh=color-ssh
+
+
+#
+# Running GNU coreutils via Homebrew on your Mac? Here's a one-liner to get the manpages working!
+# https://gist.github.com/quickshiftin/9130153
+#
+#alias man='_() { echo $1; man -M $(brew --prefix)/opt/coreutils/libexec/gnuman $1 1>/dev/null 2>&1;  if [ "$?" -eq 0 ]; then man -M $(brew --prefix)/opt/coreutils/libexec/gnuman $1; else man $1; fi }; _'
+
 

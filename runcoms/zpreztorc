@@ -40,7 +40,7 @@ zstyle ':prezto:load' pmodule \
 #
 
 # Set the key mapping style to 'emacs' or 'vi'.
-zstyle ':prezto:module:editor' key-bindings 'vi'
+#zstyle ':prezto:module:editor' key-bindings 'vi'
 
 # Auto convert .... to ../..
 # zstyle ':prezto:module:editor' dot-expansion 'yes'
@@ -57,7 +57,7 @@ zstyle ':prezto:module:editor' key-bindings 'vi'
 #
 
 # Set the command prefix on non-GNU systems.
-# zstyle ':prezto:module:gnu-utility' prefix 'g'
+zstyle ':prezto:module:gnu-utility' prefix 'g'
 
 #
 # History Substring Search
