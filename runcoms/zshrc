@@ -61,7 +61,7 @@ alias ..5='cd ../../../../..'
 # For safety
 #
 # "rm -rf" is very dangerous! Must not be used.
-
+alias r='ls'
 
 #
 # Projects
@@ -114,8 +114,23 @@ alias hadoopdocker='cd /Users/siyuan/workspace/spark/hadoop-cluster-docker'
 
 # Research
 alias cuda='cd /Users/siyuan/workspace/IPADS/cuda_learn'
-alias wukong='cd /Users/siyuan/workspace/IPADS/wukong'
+alias wkg='cd /Users/siyuan/workspace/IPADS/wukongGPU-master'
+alias wkong='cd /Users/siyuan/workspace/IPADS/graph-query'
+alias paper='cd /Users/siyuan/workspace/IPADS/papers/wukong-g'
 alias ipads='cd /Users/siyuan/workspace/IPADS'
+alias wkdoc='cd /Users/siyuan/workspace/IPADS/wukong-team-docs'
 
+# thefuck
+eval "$(thefuck --alias)"
 
+# autojump
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
+# web proxy
+#export {https,http}_proxy='http://192.168.10.1:7777'
+#export {https,http}_proxy='http://202.120.40.82:11235'
+
+# Conda
+alias condaenv='source activate'
+alias condaquit='source deactivate'
 

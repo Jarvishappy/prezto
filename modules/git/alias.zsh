@@ -116,7 +116,7 @@ alias gma='git merge --abort'
 alias gmt='git mergetool'
 
 # Push (p)
-alias gp='git push'
+# alias gp='git push'
 alias gpf='git push --force'
 alias gpa='git push --all'
 alias gpA='git push --all && git push --tags'

@@ -14,9 +14,14 @@ fi
 # Java
 #export JAVA_HOME=/Library/Java/JavaVirtualMachines/1.6.0_65-b14-462.jdk/Contents/Home
 #export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_65.jdk/Contents/Home
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home
+export JAVA_INCLUDE_PATH=$JAVA_HOME/include
 export HADOOP_HOME=/usr/local/hadoop-2.7.2
 export HADOOP_PREFIX=/usr/local/hadoop-2.7.2
+
+# Scala
+export SCALA_HOME=/usr/local/opt/scala/idea
+
 
 export CLASSPATH=.:$JAVA_HOME/lib/tools.jar:$JAVA_HOME/lib/dt.jar
 # Groovy
@@ -34,12 +39,22 @@ export SONAR_RUNNER_HOME=/Users/siyuan/tools/sonar-runner-2.4
 export ANDROID_SDK_HOME=/Users/siyuan/Library/Android/sdk
 
 export CUDA_HOME=/usr/local/cuda
+export GOPATH="/Users/siyuan/workspace/Go"
 
 #export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+export PATH=/usr/local/bin:$PATH
 export PATH=$PATH:$HOME/bin:$JAVA_HOME/bin:$M2_HOME/bin:$CATALINA_HOME/bin:$ANDROID_SDK_HOME/platform-tools:$HADOOP_HOME/bin
 export PATH=$PATH:$CUDA_HOME/bin
+export PATH=$PATH:$GOPATH/bin
 
+# Protobuf
+export PATH="/usr/local/opt/protobuf@2.5/bin:$PATH"
+export PATH="/usr/local/opt/gnuplot@4/bin:$PATH"
 
+#export PATH="/usr/local/Cellar/php70/7.0.27_19/bin:$PATH"
+
+# added by Miniconda3 installer
+export PATH="$PATH:/Users/siyuan/miniconda3/bin"
 
 # 解决javac乱码
 export LC_CTYPE=en_US.UTF-8
@@ -47,5 +62,12 @@ export LC_ALL=en_US.UTF-8
 #
 
 export HISTTIMEFORMAT="%d%m%y %T "
+
+# tell less not to paginate if less than a page
+export LESS='-F -X $LESS'
+export HOMEBREW_NO_AUTO_UPDATE=1
+export MLPATH="$HOME/workspace/ML"
+export OPENSSL_ROOT_DIR=/usr/local/opt/openssl
+export OPENSSL_INCLUDE_DIR=/usr/local/opt/openssl/include
 
 
