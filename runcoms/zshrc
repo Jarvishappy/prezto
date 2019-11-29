@@ -10,6 +10,9 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+promptinit
+prompt sorin
+
 # Customize to your needs...
 
 
@@ -68,7 +71,6 @@ alias r='ls'
 #
 alias liso='cd /Users/siyuan/workspace/C/liso_http_server'
 alias 15-441='cd /Users/siyuan/Documents/Courses/CMU/Computer\ Network/assignments'
-alias rmi='cd /Users/siyuan/workspace/Projects/cmu-15-440-s12'
 alias cmu-p1='cd /Users/siyuan/Documents/Courses/CMU/15-410_OS_S2015/projects/project1/p1'
 alias cmu-p2='cd /Users/siyuan/Documents/Courses/CMU/15-410_OS_S2015/projects/project2/p2'
 alias proxylab='cd /Users/siyuan/Documents/Courses/CMU/15-213/labs/lab8'
